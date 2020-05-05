@@ -4,7 +4,7 @@ import Item from '../ProfileComponents/Item'
 class ListingItems extends Component {
 
     arrComponents = () => {
-        let arrOfItems = this.props.items.map( itemObj => {
+        let arrOfItems = this.props.itemsArr.map( itemObj => {
             return <Item key={itemObj.id} item={itemObj} />
         })
         return arrOfItems
@@ -14,7 +14,6 @@ class ListingItems extends Component {
     render() {
         return (
             <div className="listing">
-                <h2>Art + Collectibles</h2>
                 <div id="listing-options">
                     {this.arrComponents()}
                 </div>
